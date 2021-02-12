@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>System - Linux docs</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-forest-light.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Linux docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Linux docs</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">How to <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../how-to/system/boot-manually/">Boot manually</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools by category <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../bash/">Bash terminal</a>
+</li>
+                                    
+<li >
+    <a href="../compression-decompression/">Compression & decompression</a>
+</li>
+                                    
+<li >
+    <a href="../files/">Files</a>
+</li>
+                                    
+<li >
+    <a href="../networking/">Networking</a>
+</li>
+                                    
+<li >
+    <a href="../package-managment/">Package managment</a>
+</li>
+                                    
+<li >
+    <a href="../processes/">Processes</a>
+</li>
+                                    
+<li >
+    <a href="../remote-connection/">Remote connection</a>
+</li>
+                                    
+<li >
+    <a href="../storage-devices/">Storage devices</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">System</a>
+</li>
+                                    
+<li >
+    <a href="../text-editors/">Text editors</a>
+</li>
+                                    
+<li >
+    <a href="../text-manipulation/">Text manipulation</a>
+</li>
+                                    
+<li >
+    <a href="../users/">Users</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../storage-devices/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../text-editors/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/1nfiniteloop/linux-docs/edit/master/docs/tools-by-category/system.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#system">System</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#files">Files</a></li>
+            <li><a href="#usage">Usage</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="system">System</h1>
+<h2 id="tools">Tools</h2>
+<ul>
+<li><code>apropos</code> - Search the manual page for program names and descriptions.</li>
+<li><code>date</code> - Print or set the system date and time.</li>
+<li><code>dmesg</code> - Print or control the kernel ring buffer.</li>
+<li><code>free</code> - Display free &amp; used memory on the system.</li>
+<li><code>grub-*</code> - GRUB bootloader configuration.</li>
+<li><code>halt</code> - Halt machine. Deprecated, use <code>shutdown</code>.</li>
+<li><code>journalctl</code> - Query the systemd journal.</li>
+<li><code>man</code> - Show manual for a program.</li>
+<li><code>reboot</code> - Deprecated, use <code>shutdown</code>.</li>
+<li><code>service</code> - Main utility for managing <em>System V</em> services.</li>
+<li><code>sudo</code> - Execute a command as superuser or another user.</li>
+<li><code>sysctl</code> - Configure kernel parameters at runtime.</li>
+<li><code>systemctl</code> - Main utility for managing <em>systemd</em> services.</li>
+<li><code>update-grub2</code> - update grub config after reconfiguration.</li>
+<li><code>shutdown</code> - Restart and shutdown (power off).</li>
+</ul>
+<h2 id="files">Files</h2>
+<ul>
+<li><code>/etc/timezone</code> - Contains a string of the current configured timezone.</li>
+<li><code>/etc/localtime</code> - Symbolic link to current timezone data (Check timezone with <code>readlink /etc/localtime</code>).</li>
+<li><code>/etc/default/grub</code> - GRUB Bootloader configuration.</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<h3 id="system-services">System services</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>systemctl list-units --type service</code></td>
+<td>List active services. flag <code>--all</code> lists all available services.</td>
+</tr>
+<tr>
+<td><code>systemctl status &lt;service&gt;</code></td>
+<td>Show status of service.</td>
+</tr>
+<tr>
+<td><code>systemctl start|stop|restart &lt;service&gt;</code></td>
+<td>Start or stop service.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kernel-configuration">Kernel configuration</h3>
+<p>Set kernel parameters, exampls:</p>
+<ul>
+<li>non-persistent: <code>sudo sysctl net.ipv4.ip_forward=1</code>.</li>
+<li>Persistent: create a file in <code>/etc/sysctl.d/60-*.conf</code>, see further in <code>/etc/sysctl.d/README</code>.</li>
+</ul>
+<h3 id="logs-journals">Logs &amp; Journals</h3>
+<ul>
+<li>List journals from a systemd-managed service with <code>journalctl -u systemd-networkd.service</code></li>
+</ul>
+<h3 id="memory">Memory</h3>
+<ul>
+<li>Show available RAM memory: <code>free -h</code></li>
+</ul>
+<h3 id="system-time">System time</h3>
+<ul>
+<li>Configure timezone interactively with <code>sudo dpkg-reconfigure tzdata</code>.</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

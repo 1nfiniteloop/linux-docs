@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Text editors - Linux docs</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-forest-light.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Linux docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Linux docs</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">How to <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../how-to/system/boot-manually/">Boot manually</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools by category <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../bash/">Bash terminal</a>
+</li>
+                                    
+<li >
+    <a href="../compression-decompression/">Compression & decompression</a>
+</li>
+                                    
+<li >
+    <a href="../files/">Files</a>
+</li>
+                                    
+<li >
+    <a href="../networking/">Networking</a>
+</li>
+                                    
+<li >
+    <a href="../package-managment/">Package managment</a>
+</li>
+                                    
+<li >
+    <a href="../processes/">Processes</a>
+</li>
+                                    
+<li >
+    <a href="../remote-connection/">Remote connection</a>
+</li>
+                                    
+<li >
+    <a href="../storage-devices/">Storage devices</a>
+</li>
+                                    
+<li >
+    <a href="../system/">System</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Text editors</a>
+</li>
+                                    
+<li >
+    <a href="../text-manipulation/">Text manipulation</a>
+</li>
+                                    
+<li >
+    <a href="../users/">Users</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../system/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../text-manipulation/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/1nfiniteloop/linux-docs/edit/master/docs/tools-by-category/text-editors.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#text-editors">Text editors</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#files">Files</a></li>
+            <li><a href="#usage">Usage</a></li>
+            <li><a href="#reference">Reference</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="text-editors">Text editors</h1>
+<h2 id="tools">Tools</h2>
+<ul>
+<li><code>aspell</code> - Interactive spell checker.</li>
+<li><code>less</code> - Read text-files.</li>
+<li><code>more</code> - Page through text, only in downward direction.</li>
+<li><code>nano</code> - Read -and manipulate text-files.</li>
+<li><code>vi</code> - Read -and manipulate text-files.</li>
+</ul>
+<h2 id="files">Files</h2>
+<ul>
+<li><code>~/.vimrc</code> - configuration file for vi and vim.</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<h3 id="vi-less">vi, less</h3>
+<p>Common flags to <code>less</code>:</p>
+<ul>
+<li><code>-R</code> output in ANSI "color". Example used with <code>grep --color=always |less -R</code>.</li>
+<li><code>-N</code> output line numbers.</li>
+</ul>
+<p><strong>Navigate:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>i</code></td>
+<td>Enter insertion mode (exit with <code>Esc</code>)</td>
+</tr>
+<tr>
+<td><code>:q</code></td>
+<td>Exit editor</td>
+</tr>
+<tr>
+<td><code>:q!</code></td>
+<td>Exit editor without saving</td>
+</tr>
+<tr>
+<td><code>:wq</code></td>
+<td>Exit editor and save changes</td>
+</tr>
+<tr>
+<td><em>line no</em> + <code>G</code></td>
+<td>Goto line</td>
+</tr>
+<tr>
+<td><code>G</code></td>
+<td>Goto last line</td>
+</tr>
+<tr>
+<td><code>g</code></td>
+<td>Goto first line</td>
+</tr>
+<tr>
+<td><code>:p</code></td>
+<td>Goto previous file</td>
+</tr>
+<tr>
+<td><code>:n</code></td>
+<td>Goto next file</td>
+</tr>
+<tr>
+<td><code>h</code></td>
+<td>Help (<code>q</code> to quit help-view)</td>
+</tr>
+<tr>
+<td><code>/</code> + <em>text</em> + <code>Enter</code></td>
+<td>Search forward</td>
+</tr>
+<tr>
+<td><code>?</code> + <em>text</em> + <code>Enter</code></td>
+<td>Search backward</td>
+</tr>
+<tr>
+<td><code>n</code></td>
+<td>Search next forward</td>
+</tr>
+<tr>
+<td><code>N</code></td>
+<td>Search next backward</td>
+</tr>
+<tr>
+<td><code>-i</code></td>
+<td>toggle case-insesnitive in searches</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Manipulate (only for vi):</strong></p>
+<ul>
+<li><code>y</code> means yank (copy) content.</li>
+<li><code>p</code> means put (paste) content.</li>
+<li><code>d</code> means delete (cut) content.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>i</code></td>
+<td>Edit text (exit insert-mode with <code>Esc</code>)</td>
+</tr>
+<tr>
+<td><em>number-of-lines</em> + <code>dd</code></td>
+<td>Cut lines</td>
+</tr>
+<tr>
+<td><em>number-of-lines</em> + <code>yy</code></td>
+<td>Copy lines</td>
+</tr>
+<tr>
+<td><code>yaw</code></td>
+<td>Copy  word, until next whitespace (included)</td>
+</tr>
+<tr>
+<td><code>yiw</code></td>
+<td>Copy word, until next whitespace (not included)</td>
+</tr>
+<tr>
+<td><code>y$</code></td>
+<td>Copy content right of the cursor, until end</td>
+</tr>
+<tr>
+<td><code>y^</code></td>
+<td>Copy content left of the cursor, until beginning</td>
+</tr>
+<tr>
+<td><code>ytx</code></td>
+<td>Copy until character <em>x</em></td>
+</tr>
+<tr>
+<td><code>v</code></td>
+<td>Mark text in visual mode, followed by <code>y</code> to copy or <code>d</code> to cut.</td>
+</tr>
+<tr>
+<td><code>p</code> or <code>P</code></td>
+<td>Paste lines before or after cursor.</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>r</code></td>
+<td>Redo</td>
+</tr>
+<tr>
+<td><code>u</code></td>
+<td>Undo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> if <code>vi</code> does not work as expected when editing files, install <code>vim</code> or
+add <code>set nocompatible</code> into <code>~/.vimrc</code>.</p>
+<h3 id="nano">nano</h3>
+<p><strong>Navigate:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl</code> + <code>x</code></td>
+<td>Exit editor</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>Shift</code> + <code>-</code></td>
+<td>Goto line</td>
+</tr>
+<tr>
+<td><code>Alt</code> + <code>/</code></td>
+<td>Goto last line</td>
+</tr>
+<tr>
+<td><code>Alt</code> + <code>\</code></td>
+<td>Goto first line</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>g</code></td>
+<td>Open help section</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>w</code> (or <code>F6</code>)</td>
+<td>Search</td>
+</tr>
+<tr>
+<td><code>Alt</code> + <code>w</code></td>
+<td>Search next forward</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Manipulate:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl</code> + <code>k</code></td>
+<td>Cut lines</td>
+</tr>
+<tr>
+<td><code>Alt</code> + <code>6</code></td>
+<td>Copy lines</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>u</code></td>
+<td>Paste lines</td>
+</tr>
+<tr>
+<td><code>Alt</code> + <code>E</code></td>
+<td>Redo</td>
+</tr>
+<tr>
+<td><code>Alt</code> + <code>U</code></td>
+<td>Undo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> In help section:</p>
+<ul>
+<li><code>^</code> = <code>Ctrl</code> key</li>
+<li><code>M</code> = <code>Alt</code> key</li>
+</ul>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://vim.rtorr.com/">https://vim.rtorr.com/</a></li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
