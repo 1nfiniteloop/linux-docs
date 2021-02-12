@@ -1,0 +1,7 @@
+site_name: Linux docs
+theme: simplex
+docs_dir: 'docs'
+
+# deploy:
+repo_url: https://github.com/1nfiniteloop/linux-docs
+remote_name: github.com
