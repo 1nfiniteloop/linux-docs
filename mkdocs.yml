@@ -1,7 +1,7 @@
 site_name: Linux docs
-theme: simplex
+theme: simplex  # from http://mkdocs.github.io/mkdocs-bootswatch/
 docs_dir: 'docs'
 
-# deploy:
+# gh-deploy:
 repo_url: https://github.com/1nfiniteloop/linux-docs
 remote_name: github.com
