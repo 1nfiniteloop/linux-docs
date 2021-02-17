@@ -2,6 +2,7 @@
 
 ## Tools
 
+* `blkid` - Print block device attributes.
 * `dd` - File/block copy utility.
 * `fdisk` - Partition tool, menu-driven.
 * `gparted` - Graphical version of parted.
