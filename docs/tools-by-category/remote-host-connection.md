@@ -1,4 +1,4 @@
-# Remote connection
+# Remote host connection
 
 ## Tools
 
