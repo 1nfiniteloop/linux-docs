@@ -32,6 +32,8 @@ Command                                                       | Description
 `dd if=<img> of=/dev/mmcblk0 bs=1M status='progress' && sync` | Copy image to memory card and show progress.
 `sfdisk --list <img|dev>`                                     | List partition table of image or block device.
 `mount -o offset=$((2848*512)) <img> /mnt`                    | Mount partition of image where offset=2048 and sector-size=512.
+`sudo losetup --partscan --show --find <img>`                 | Mount image as loop devices, prints associated loop device.
+`sudo losetup --detach /dev/loop<no>`                         | Detach associated loop device.
 
 ## Notes
 

@@ -12,11 +12,12 @@
 * `man` - Show manual for a program.
 * `reboot` - Deprecated, use `shutdown`.
 * `service` - Main utility for managing *System V* services.
+* `shutdown` - Restart and shutdown (power off).
 * `sudo` - Execute a command as superuser or another user.
 * `sysctl` - Configure kernel parameters at runtime.
 * `systemctl` - Main utility for managing *systemd* services.
 * `update-grub2` - update grub config after reconfiguration.
-* `shutdown` - Restart and shutdown (power off).
+* `which` - locate a command.
 
 ## Files
 
