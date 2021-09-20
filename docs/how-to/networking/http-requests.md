@@ -11,6 +11,7 @@ Common used flags for `curl`:
 * `[-H|--header]` - Extra header to include in the request.
 * `[-i|--include]` - Print header in response.
 * `[-X|--request]` - Request type to use.
+* `[-L|--location]` - Follow server redirect.
 
 ### Usage
 
