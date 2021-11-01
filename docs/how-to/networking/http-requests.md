@@ -12,6 +12,8 @@ Common used flags for `curl`:
 * `[-i|--include]` - Print header in response.
 * `[-X|--request]` - Request type to use.
 * `[-L|--location]` - Follow server redirect.
+* `[-O|--remote-name]` - Save to remote file name instead of piping to stdout.
+* `[-S|--silent]` - Don't show progress or errors.
 
 ### Usage
 
