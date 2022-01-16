@@ -4,4 +4,3 @@ docs_dir: 'docs'
 
 # gh-deploy:
 repo_url: https://github.com/1nfiniteloop/linux-docs
-remote_name: github.com

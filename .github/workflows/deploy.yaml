@@ -1,0 +1,32 @@
+name: Deploy docs
+
+on:
+  push:
+    tags:
+      - 'v*'
+    branches:
+      - main
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: '0' # all branches and tags
+
+      # https://packaging.python.org/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
+      - name: Setup Python env
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+
+      - name: Install mkdocs
+        run: python3 -m pip install --user -r requirements.txt
+
+      - name: Deploy
+        run: |
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          mkdocs gh-deploy --strict --force
