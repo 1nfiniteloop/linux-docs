@@ -9,170 +9,157 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Package managment - Linux docs</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-forest-light.min.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/atelier-forest-light.min.css">
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
     <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">Linux docs</a>
-                </div>
+                <a class="navbar-brand" href="../..">Linux docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
+                <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../..">Linux docs</a>
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Linux docs</a>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">How to <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">How to <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
   <li class="dropdown-submenu">
-    <a href="#">Networking</a>
+    <a href="#" class="dropdown-item">Networking</a>
     <ul class="dropdown-menu">
             
-<li >
-    <a href="../../how-to/networking/http-requests/">http(s) requests</a>
+<li>
+    <a href="../../how-to/networking/http-requests/" class="dropdown-item">http(s) requests</a>
 </li>
             
-<li >
-    <a href="../../how-to/networking/network-speed-test/">Network speed test</a>
+<li>
+    <a href="../../how-to/networking/network-speed-test/" class="dropdown-item">Network speed test</a>
 </li>
     </ul>
   </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#">Storage devices</a>
+    <a href="#" class="dropdown-item">Storage devices</a>
     <ul class="dropdown-menu">
             
-<li >
-    <a href="../../how-to/storage-devices/create-encrypted-container/">Create encrypted container</a>
+<li>
+    <a href="../../how-to/storage-devices/create-encrypted-container/" class="dropdown-item">Create encrypted container</a>
 </li>
             
-<li >
-    <a href="../../how-to/storage-devices/create-raw-disk-image/">Create raw disk image</a>
+<li>
+    <a href="../../how-to/storage-devices/create-raw-disk-image/" class="dropdown-item">Create raw disk image</a>
 </li>
     </ul>
   </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#">System</a>
+    <a href="#" class="dropdown-item">System</a>
     <ul class="dropdown-menu">
             
-<li >
-    <a href="../../how-to/system/adjust-swap-size/">Adjust swap size</a>
+<li>
+    <a href="../../how-to/system/adjust-swap-size/" class="dropdown-item">Adjust swap size</a>
 </li>
             
-<li >
-    <a href="../../how-to/system/boot-manually/">Boot manually</a>
+<li>
+    <a href="../../how-to/system/boot-manually/" class="dropdown-item">Boot manually</a>
 </li>
             
-<li >
-    <a href="../../how-to/system/system-recovery/">System recovery</a>
+<li>
+    <a href="../../how-to/system/system-recovery/" class="dropdown-item">System recovery</a>
 </li>
     </ul>
   </li>
                                 </ul>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools by category <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tools by category <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../bash/">Bash terminal</a>
+<li>
+    <a href="../bash/" class="dropdown-item">Bash terminal</a>
 </li>
                                     
-<li >
-    <a href="../compression-decompression/">Compression & decompression</a>
+<li>
+    <a href="../compression-decompression/" class="dropdown-item">Compression & decompression</a>
 </li>
                                     
-<li >
-    <a href="../files/">Files</a>
+<li>
+    <a href="../files/" class="dropdown-item">Files</a>
 </li>
                                     
-<li >
-    <a href="../networking/">Networking</a>
+<li>
+    <a href="../networking/" class="dropdown-item">Networking</a>
 </li>
                                     
-<li class="active">
-    <a href="./">Package managment</a>
+<li>
+    <a href="./" class="dropdown-item active">Package managment</a>
 </li>
                                     
-<li >
-    <a href="../processes/">Processes</a>
+<li>
+    <a href="../processes/" class="dropdown-item">Processes</a>
 </li>
                                     
-<li >
-    <a href="../remote-host-connection/">Remote host connection</a>
+<li>
+    <a href="../remote-host-connection/" class="dropdown-item">Remote host connection</a>
 </li>
                                     
-<li >
-    <a href="../storage-devices/">Storage devices</a>
+<li>
+    <a href="../storage-devices/" class="dropdown-item">Storage devices</a>
 </li>
                                     
-<li >
-    <a href="../system/">System</a>
+<li>
+    <a href="../system/" class="dropdown-item">System</a>
 </li>
                                     
-<li >
-    <a href="../text-editors/">Text editors</a>
+<li>
+    <a href="../text-editors/" class="dropdown-item">Text editors</a>
 </li>
                                     
-<li >
-    <a href="../text-manipulation/">Text manipulation</a>
+<li>
+    <a href="../text-manipulation/" class="dropdown-item">Text manipulation</a>
 </li>
                                     
-<li >
-    <a href="../users/">Users</a>
+<li>
+    <a href="../users/" class="dropdown-item">Users</a>
 </li>
                                 </ul>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li >
-                                <a rel="next" href="../networking/">
+                            <li class="nav-item">
+                                <a rel="prev" href="../networking/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li >
-                                <a rel="prev" href="../processes/">
+                            <li class="nav-item">
+                                <a rel="next" href="../processes/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
-                            <li>
-                                <a href="https://github.com/1nfiniteloop/linux-docs/edit/master/docs/tools-by-category/package-managment.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            <li class="nav-item">
+                                <a href="https://github.com/1nfiniteloop/linux-docs/edit/master/docs/tools-by-category/package-managment.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -180,15 +167,38 @@
         </div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#package-managment">Package managment</a></li>
-            <li><a href="#tools">Tools</a></li>
-            <li><a href="#files">Files</a></li>
-            <li><a href="#usage">Usage</a></li>
-    </ul>
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#package-managment" class="nav-link">Package managment</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#tools" class="nav-link">Tools</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#files" class="nav-link">Files</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#usage" class="nav-link">Usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-                <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <h1 id="package-managment">Package managment</h1>
 <h2 id="tools">Tools</h2>
@@ -256,6 +266,7 @@
 </tr>
 </tbody>
 </table></div>
+            </div>
         </div>
 
         <footer class="col-md-12">
@@ -264,40 +275,37 @@
         </footer>
         <script>
             var base_url = "../..",
-                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../../js/base.js" defer></script>
         <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
             <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results"></div>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
             </div>
             <div class="modal-footer">
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">
