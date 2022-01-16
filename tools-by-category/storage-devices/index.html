@@ -217,6 +217,8 @@
 <li><code>resize2fs</code> - Resize file systems (ext2, ext3, ext4).</li>
 <li><code>sfdisk</code> - Partition tool, non-interactive.</li>
 <li><code>sync</code> - Synchronize cached writes to persistent storage.</li>
+<li><code>udisksctl</code> - commandline tool for managing disks without sudo privileges
+  on desktop environments.</li>
 </ul>
 <h2 id="files">Files</h2>
 <ul>
@@ -259,6 +261,17 @@
 <td><code>sfdisk --list &lt;img|dev&gt;</code></td>
 <td>List partition table of image or block device.</td>
 </tr>
+</tbody>
+</table>
+<p>Mount:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><code>mount -o offset=$((2848*512)) &lt;img&gt; /mnt</code></td>
 <td>Mount partition of image where offset=2048 and sector-size=512.</td>
@@ -270,6 +283,10 @@
 <tr>
 <td><code>sudo losetup --detach /dev/loop&lt;no&gt;</code></td>
 <td>Detach associated loop device.</td>
+</tr>
+<tr>
+<td><code>udisksctl loop-setup -f ~/private-luks-container</code></td>
+<td>Mount a loop device without sudo privileges, on desktop environments.</td>
 </tr>
 </tbody>
 </table>
