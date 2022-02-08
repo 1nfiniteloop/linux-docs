@@ -40,3 +40,10 @@ Ref: <https://wiki.ubuntu.com/DebuggingKernelBoot#Dropped_into_a_initramfs_shell
    presssing `F10`.
 4. Continue boot by changing to normal runlevel with
    `systemctl isolate graphical.target` (Ubuntu uses `systemd,` not `init`).
+
+## Kernel cmdline
+
+The kernel, the initial RAM disk (initrd) and basic userspace functionality may be configured at boot via kernel command line arguments.
+
+See `man initramfs-tools` for parameters consumed during initramfs, example
+parameters `break`, `ip`, `ro`.
