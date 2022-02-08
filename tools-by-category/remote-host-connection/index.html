@@ -268,8 +268,8 @@
 </thead>
 <tbody>
 <tr>
-<td><code>ssh-keygen -f ~/.ssh/&lt;keyname&gt;</code></td>
-<td>Generate new rsa keypair with default values*.</td>
+<td><code>ssh-keygen -a 128 -t ed25519 -f ~/.ssh/&lt;user&gt;@&lt;fqdn&gt;</code></td>
+<td>Generate new keypair* based on elliptic curve 25519 and with 128 passphrase key derivation rounds.</td>
 </tr>
 <tr>
 <td><code>ssh-copy-id -i ~/.ssh/&lt;user&gt;@&lt;fqdn&gt;.pub &lt;user&gt;@&lt;fqdn&gt;</code></td>

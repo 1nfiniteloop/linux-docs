@@ -219,6 +219,11 @@
 <li><code>sync</code> - Synchronize cached writes to persistent storage.</li>
 <li><code>udisksctl</code> - commandline tool for managing disks without sudo privileges
   on desktop environments.</li>
+<li><code>lvresize</code> - Resize s logical volume.</li>
+<li><code>lvcreate</code> - Create a logical volume.</li>
+<li><code>lvs</code> - Display information about logical volumes.</li>
+<li><code>vgs</code> - Display information about volume groups.</li>
+<li><code>pvs</code> - Display information about physical volumes.</li>
 </ul>
 <h2 id="files">Files</h2>
 <ul>
@@ -287,6 +292,29 @@
 <tr>
 <td><code>udisksctl loop-setup -f ~/private-luks-container</code></td>
 <td>Mount a loop device without sudo privileges, on desktop environments.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="logical-volumes">Logical volumes</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lvresize --resizefs --size 50G /dev/mapper/vg-root</code></td>
+<td>Resize logical volume and file system.</td>
+</tr>
+<tr>
+<td><code>lvextend --resizefs --extents +100%FREE /dev/mapper/&lt;name&gt;</code></td>
+<td>Resize to use all remaining space available in volume group.</td>
+</tr>
+<tr>
+<td><code>lvcreate --size 10G --name home &lt;existing-vg-name&gt;</code></td>
+<td>Create new logical volume.</td>
 </tr>
 </tbody>
 </table>

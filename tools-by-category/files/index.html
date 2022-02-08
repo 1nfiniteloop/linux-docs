@@ -229,6 +229,7 @@
 <li><code>split</code> - Split file into pieces.</li>
 <li><code>tail</code> - Output last part of file.</li>
 <li><code>umask</code> - Set file mode creation mask in folder.</li>
+<li><code>wc</code> - Word and line count.</li>
 <li><code>xxd</code> - Make a hexdump or do the reverse (see also <code>hexdump</code>).</li>
 </ul>
 <h2 id="usage">Usage</h2>
@@ -357,6 +358,10 @@
 <tr>
 <td><code>du -hPd 1 / |sort -hr</code></td>
 <td>Check total size of folders in root, sorted by size.</td>
+</tr>
+<tr>
+<td><code>wc -c &lt;file&gt;</code></td>
+<td>Check file contents size in bytes.</td>
 </tr>
 <tr>
 <td><code>lsof &lt;file-or-directory&gt;</code></td>
