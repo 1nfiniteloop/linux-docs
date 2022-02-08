@@ -14,6 +14,11 @@
 * `sync` - Synchronize cached writes to persistent storage.
 * `udisksctl` - commandline tool for managing disks without sudo privileges
   on desktop environments.
+* `lvresize` - Resize s logical volume.
+* `lvcreate` - Create a logical volume.
+* `lvs` - Display information about logical volumes.
+* `vgs` - Display information about volume groups.
+* `pvs` - Display information about physical volumes.
 
 ## Files
 
@@ -44,6 +49,13 @@ Command                                            | Description
 `sudo losetup --detach /dev/loop<no>`              | Detach associated loop device.
 `udisksctl loop-setup -f ~/private-luks-container` | Mount a loop device without sudo privileges, on desktop environments.
 
+### Logical volumes
+
+Command                                                      | Description
+-------------------------------------------------------------|------------------------------------------------------------
+`lvresize --resizefs --size 50G /dev/mapper/vg-root`         | Resize logical volume and file system.
+`lvextend --resizefs --extents +100%FREE /dev/mapper/<name>` | Resize to use all remaining space available in volume group.
+`lvcreate --size 10G --name home <existing-vg-name>`         | Create new logical volume.
 
 ## Notes
 
