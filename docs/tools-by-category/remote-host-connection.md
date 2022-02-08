@@ -44,7 +44,7 @@ Command                                        | Description
 
 Command                                                 | Description
 --------------------------------------------------------|---------------------------------------------------------------------------------------------------------------
-`ssh-keygen -f ~/.ssh/<keyname>`                        | Generate new rsa keypair with default values*.
+`ssh-keygen -a 128 -t ed25519 -f ~/.ssh/<user>@<fqdn>`  | Generate new keypair* based on elliptic curve 25519 and with 128 passphrase key derivation rounds.
 `ssh-copy-id -i ~/.ssh/<user>@<fqdn>.pub <user>@<fqdn>` | Copy and enable ssh key to remote host.
 `eval $(ssh-agent)`                                     | Start ssh agent. __Note:__ `gnome-keyring` is normally the ssh-agent on desktop environments, thus not needed.
 `ssh-add -l`                                            | list available keys in ssh agent.
