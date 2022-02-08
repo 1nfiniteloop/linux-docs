@@ -32,6 +32,7 @@
 * `split` - Split file into pieces.
 * `tail` - Output last part of file.
 * `umask` - Set file mode creation mask in folder.
+* `wc` - Word and line count.
 * `xxd` - Make a hexdump or do the reverse (see also `hexdump`).
 
 ## Usage
@@ -83,6 +84,7 @@ Command                       | Description
 `stat -c "%a %n" <file-name>` | Display file or folder permissions in octal.
 `du -sh <file-or-directory>`  | Check total size of file or folder and its content.
 `du -hPd 1 / |sort -hr`       | Check total size of folders in root, sorted by size.
+`wc -c <file>`                | Check file contents size in bytes.
 `lsof <file-or-directory>`    | Check what process uses this directory or file.
 `fuser <file>`                | Identify processes using files (or sockets).
 
