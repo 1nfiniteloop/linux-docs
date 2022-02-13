@@ -92,7 +92,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../tools-by-category/bash/" class="dropdown-item">Bash terminal</a>
+    <a href="../../../tools-by-category/bash/" class="dropdown-item">bash</a>
 </li>
                                     
 <li>
@@ -116,7 +116,7 @@
 </li>
                                     
 <li>
-    <a href="../../../tools-by-category/remote-host-connection/" class="dropdown-item">Remote host connection</a>
+    <a href="../../../tools-by-category/ssh/" class="dropdown-item">ssh</a>
 </li>
                                     
 <li>
@@ -185,6 +185,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#kernel-cmdline" class="nav-link">Kernel cmdline</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -227,7 +231,11 @@ if using UEFI. See more @ <a href="https://help.ubuntu.com/community/Grub2#Hidde
    presssing <code>F10</code>.</li>
 <li>Continue boot by changing to normal runlevel with
    <code>systemctl isolate graphical.target</code> (Ubuntu uses <code>systemd,</code> not <code>init</code>).</li>
-</ol></div>
+</ol>
+<h2 id="kernel-cmdline">Kernel cmdline</h2>
+<p>The kernel, the initial RAM disk (initrd) and basic userspace functionality may be configured at boot via kernel command line arguments.</p>
+<p>See <code>man initramfs-tools</code> for parameters consumed during initramfs, example
+parameters <code>break</code>, <code>ip</code>, <code>ro</code>.</p></div>
             </div>
         </div>
 
