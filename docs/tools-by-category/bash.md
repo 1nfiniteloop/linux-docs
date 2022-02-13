@@ -1,4 +1,4 @@
-# Bash terminal
+# bash
 
 ## Tools
 

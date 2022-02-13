@@ -1,4 +1,4 @@
-# Remote host connection
+# ssh
 
 ## Tools
 
