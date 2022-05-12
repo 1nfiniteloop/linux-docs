@@ -13,6 +13,7 @@
 * `groupmod` - modify a group definition on the system, example change gid.
 * `id` - Print user and group IDs.
 * `last` - Show a listing of last logged in users.
+* `newgrp` - Start a shell with a new primary group (use exit to change back).
 * `passwd` - Change login passsword, interactive.
 * `useradd` - Add user to system (low level utility, suitable in scripts).
 * `usermod` - Modify a user account.
