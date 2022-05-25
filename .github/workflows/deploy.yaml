@@ -17,13 +17,15 @@ jobs:
           fetch-depth: '0' # all branches and tags
 
       # https://packaging.python.org/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
+      # https://github.com/actions/setup-python#caching-packages-dependencies
       - name: Setup Python env
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v3
         with:
-          python-version: 3.7
+          python-version: 3.8
+          cache: pip
 
       - name: Install mkdocs
-        run: python3 -m pip install --user -r requirements.txt
+        run: python3 -m pip install -r requirements.txt
 
       - name: Deploy
         run: |
