@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>ssh - Linux docs</title>
+        <title>gpg - Linux docs</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -104,7 +104,7 @@
 </li>
                                     
 <li>
-    <a href="../gpg/" class="dropdown-item">gpg</a>
+    <a href="./" class="dropdown-item active">gpg</a>
 </li>
                                     
 <li>
@@ -120,7 +120,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">ssh</a>
+    <a href="../ssh/" class="dropdown-item">ssh</a>
 </li>
                                     
 <li>
@@ -153,17 +153,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../processes/" class="nav-link">
+                                <a rel="prev" href="../files/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../storage-devices/" class="nav-link">
+                                <a rel="next" href="../networking/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/1nfiniteloop/linux-docs/edit/master/docs/tools-by-category/ssh.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/1nfiniteloop/linux-docs/edit/master/docs/tools-by-category/gpg.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -183,7 +183,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#ssh" class="nav-link">ssh</a>
+            <li class="nav-item" data-level="1"><a href="#gpg" class="nav-link">gpg</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#tools" class="nav-link">Tools</a>
               <ul class="nav flex-column">
@@ -197,6 +197,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#reference" class="nav-link">Reference</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -204,117 +208,150 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="ssh">ssh</h1>
+<h1 id="gpg">gpg</h1>
 <h2 id="tools">Tools</h2>
 <ul>
-<li><code>ssh</code> - for logging into a remote machine.</li>
-<li><code>scp</code> - Copy files and folders between hosts.</li>
-<li><code>ssh-agent</code> - authentication agent.</li>
-<li><code>ssh-add</code> - adds private key identities to the authentication agent.</li>
-<li><code>ssh-copy-id</code> - Copy ssh key into host.</li>
-<li><code>ssh-import-id-*</code> - Retrieve one or more public keys from a public keyserver.</li>
-<li><code>ssh-keygen</code> - Generate ssh keypair.</li>
+<li><code>gpg</code> - OpenPGP encryption and signing tool.</li>
+<li><code>gpg2</code> - Extended implementation of gpg but fully compatible with gpg. Mainly
+  targeted for desktop environments.</li>
+<li><code>paperkey</code> - Backup and restore gpg keys in paper format.</li>
 </ul>
 <h2 id="files">Files</h2>
 <ul>
-<li><code>~/.ssh/config</code> - OpenSSH client configuration files, see <code>man ssh_config</code></li>
-<li><code>/etc/ssh/sshd_config</code> - OpenSSH daemon configuration file, see <code>man sshd_config</code></li>
+<li><code>~/.gnupg</code> - gpg config and keyring.</li>
 </ul>
 <h2 id="usage">Usage</h2>
-<h3 id="ssh_1">ssh</h3>
-<p>Common used flags for <code>ssh</code>:</p>
+<p>For easier copy-paste of steps below, set identity with:
+<code>gpg_uid="user@example.com"</code></p>
+<h3 id="overview">Overview</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Encrypt</td>
+<td><code>gpg --encrypt --recipient &lt;email&gt; &lt;file&gt;</code></td>
+</tr>
+<tr>
+<td>Decrypt</td>
+<td><code>gpg --decrypt &lt;file&gt;.gpg</code></td>
+</tr>
+<tr>
+<td>Sign</td>
+<td><code>gpg --sign &lt;file&gt;</code></td>
+</tr>
+<tr>
+<td>Verify</td>
+<td><code>gpg --verify &lt;file&gt;.gpg</code></td>
+</tr>
+<tr>
+<td>List public keys</td>
+<td><code>gpg --list-keys</code></td>
+</tr>
+<tr>
+<td>List private keys</td>
+<td><code>gpg --list-secret-keys</code></td>
+</tr>
+<tr>
+<td>Change password</td>
+<td><code>gpg --passwd ${gpg_uid}</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="create-new-keys">Create new keys</h3>
+<p>The root key shall only be used for issue sub-keys and should be kept stored in
+a secure place offline. Thus, set a temporary gpg workdir for key generation
+which can be removed later when finshed:</p>
+<pre><code>export GNUPGHOME=${HOME}/.tmp/gnupg-genkey
+</code></pre>
+<p>Create root key, preferably choose Elliptic Curve (ECC) and curve 25519 when
+prompted. The chosen password will be used for both root key and subkeys. Set
+capability to "Certify" only with no expiry.</p>
+<pre><code>gpg --expert --full-generate-key
+</code></pre>
+<p>Create 3 separate sub-keys for signing, encryption and authentication. The root
+key id can be seen from command above or with <code>gpg --list-keys</code>. The shortened
+key id is just the last part of the complete key id. Recommend to choose
+1 year expire.</p>
+<pre><code>$ gpg --expert --edit-key ${key_id}
+gpg&gt; addkey
+...
+gpg&gt; save
+</code></pre>
+<p>Create revocation certificate which makes it posslbe to revoke the pgp identity.
+The certificate file should be stored in a secondary place that allows retrieval
+in case the key backup fails.</p>
+<pre><code>gpg --gen-revoke --output ${gpg_uid}.revoke-cert.gpg ${key_id}
+</code></pre>
+<p>Export keys by running all steps under section "Export keys".</p>
+<p>Remove workdir:</p>
+<pre><code>rm -r ${GNUPGHOME}
+</code></pre>
+<h3 id="export-keys">Export keys</h3>
+<p>Export private root key and subkeys for secure offline storage:</p>
+<pre><code>gpg --export-secret-keys --armor --output ${gpg_uid}.key.gpg ${key_id}
+</code></pre>
+<p>Export private subkeys without root-key included, for importing to user's home
+gpg keyring after root key generation:</p>
+<pre><code>gpg --export-secret-subkeys --armor --output ${gpg_uid}.subkey.gpg ${key_id}
+</code></pre>
+<p>Export public keys for distribution:</p>
+<pre><code>gpg --export --armor --output ${gpg_uid}.gpg ${key_id}
+</code></pre>
+<h3 id="backup-keys">Backup keys</h3>
+<p>Backup private root key to paperkey:</p>
+<pre><code>gpg --export-secret-key ${key_id} \
+  |paperkey --output ${gpg_uid}.paperkey
+</code></pre>
+<p>Backup private root key to paperkey as QR code:</p>
+<pre><code>gpg --export-secret-key ${key_id} \
+  |paperkey --output-type raw \
+  |qrencode --8bit --output ${gpg_uid}.paperkey.png
+</code></pre>
+<p>Export public key to QR code (in ascii text):</p>
+<pre><code>gpg --armor --export ${key_id} \
+  |qrencode --output ${gpg_uid}.ascci.png
+</code></pre>
+<h3 id="import-keys">Import keys</h3>
+<p>Import public or private keys:</p>
+<pre><code>gpg --import &lt;gpg-key&gt;
+</code></pre>
+<p>Update the key trust:</p>
+<pre><code>$ gpg --edit-key ${key_id}
+gpg&gt; trust
+...
+gpg&gt; quit
+</code></pre>
+<h3 id="restore-keys">Restore keys</h3>
+<p>Convert public key to raw format, needed when restoring paperkey
+backup below:</p>
+<pre><code>cat ${gpg_uid}.gpg \
+  |gpg --dearmor &gt; ${gpg_uid}.gpg.raw
+</code></pre>
+<p>Restore private root key from paperkey backup:</p>
+<pre><code>paperkey --pubring ${gpg_uid}.gpg.raw --secrets ${gpg_uid}.paperkey \
+  |gpg --import
+</code></pre>
+<p>Restore private root key from paperkey backup in QR code:</p>
+<pre><code>zbarimg --raw --quiet -S binary ${gpg_uid}.paperkey.png \
+  |paperkey --pubring ${gpg_uid}.gpg.raw \
+  |gpg --import
+</code></pre>
+<p><strong>Note:</strong> flag <code>-S binary</code> is a required but undocumented in the man page, it
+was added in zbarimg 0.23.1.</p>
+<p>Import public key in ascii from QR code:</p>
+<pre><code>zbarimg --raw --quiet ${gpg_uid}.ascci.png \
+  |gpg --import
+</code></pre>
+<h2 id="reference">Reference</h2>
 <ul>
-<li><code>[-A]</code> - Forward authentication agent connection.</li>
-<li><code>[-i]</code> - Private key file to use for this connection.</li>
-<li><code>[-L]</code> - Forward a local port to a remote port.</li>
-<li><code>[-N]</code> - No shell is started, only the connection is established. Usually in
-  combination with port forwarding.</li>
-<li><code>[-f]</code> - run in the background, usually in combination with port forwarding.</li>
-<li><code>[-R]</code> - forward a port on the remote host to local (reverse direction).</li>
-<li><code>[-o  ...]</code> - Additional options, see further in <code>man ssh</code>.</li>
-<li><code>[-p]</code> - connect to specific port.</li>
-<li><code>[-X]</code> - Enables X11 forwarding, run graphical applications on remote host.</li>
-<li><code>[-v]</code> - Print debug info to console.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ssh -o PubkeyAuthentication=no &lt;user&gt;@&lt;fqdn&gt;</code></td>
-<td>Connect only with password authentication.</td>
-</tr>
-<tr>
-<td><code>ssh -X &lt;user&gt;@&lt;fqdn&gt;</code></td>
-<td>Allow x11 forwarding to open graphical applications on remote.</td>
-</tr>
-<tr>
-<td><code>ssh -A &lt;user&gt;@&lt;fqdn&gt;</code></td>
-<td>Use local ssh keys on remote host, to do another hop with ssh.</td>
-</tr>
-<tr>
-<td><code>ssh -NL 8080:localhost:80 &lt;user&gt;@&lt;fqdn&gt;</code></td>
-<td>Local port 8080 is forwarded to the remote host's "localhost" port 80</td>
-</tr>
-</tbody>
-</table>
-<h3 id="ssh-keys">ssh keys</h3>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ssh-keygen -a 128 -t ed25519 -f ~/.ssh/&lt;user&gt;@&lt;fqdn&gt;</code></td>
-<td>Generate new keypair* based on elliptic curve 25519 and with 128 passphrase key derivation rounds.</td>
-</tr>
-<tr>
-<td><code>ssh-copy-id -i ~/.ssh/&lt;user&gt;@&lt;fqdn&gt;.pub &lt;user&gt;@&lt;fqdn&gt;</code></td>
-<td>Copy and enable ssh key to remote host.</td>
-</tr>
-<tr>
-<td><code>eval $(ssh-agent)</code></td>
-<td>Start ssh agent. <strong>Note:</strong> <code>gnome-keyring</code> is normally the ssh-agent on desktop environments, thus not needed.</td>
-</tr>
-<tr>
-<td><code>ssh-add -l</code></td>
-<td>list available keys in ssh agent.</td>
-</tr>
-</tbody>
-</table>
-<p>* Naming the key according to <code>&lt;user&gt;@&lt;fqdn&gt;</code> is good practice for distinguish
-keys, example <code>alice@bob.sh</code>.</p>
-<h3 id="rsync">rsync</h3>
-<p>Common used flags for <code>rsync</code>:</p>
-<ul>
-<li><code>[--progress]</code></li>
-<li><code>[-a|--archive]</code> - Preserve timestamps, ownerships, etc.</li>
-<li><code>[-z|--compress]</code></li>
-<li><code>[--remove-source-files]</code> - Remove files on sending side after successful transfer (move).</li>
-<li><code>[--ignore-existing]</code> - Skip already existing files on destination.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>rsync &lt;user&gt;@&lt;fqdn&gt;:&lt;remote-dir&gt; &lt;local-dir&gt;</code></td>
-<td>Copy folder from a remote host*</td>
-</tr>
-</tbody>
-</table>
-<p>* a trailing slash at the end on source folder means "copy content in the folder"</p></div>
+<li><a href="https://github.com/drduh/YubiKey-Guide">https://github.com/drduh/YubiKey-Guide</a></li>
+<li><a href="https://wiki.archlinux.org/title/Paperkey">https://wiki.archlinux.org/title/Paperkey</a></li>
+</ul></div>
             </div>
         </div>
 
