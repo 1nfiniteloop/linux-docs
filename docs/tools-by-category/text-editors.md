@@ -23,23 +23,27 @@ Common flags to `less`:
 
 __Navigate:__
 
-Command                | Description
------------------------|---------------------------------------
-`i`                    | Enter insertion mode (exit with `Esc`)
-`:q`                   | Exit editor
-`:q!`                  | Exit editor without saving
-`:wq`                  | Exit editor and save changes
-_line no_ + `G`        | Goto line
-`G`                    | Goto last line
-`g`                    | Goto first line
-`:p`                   | Goto previous file
-`:n`                   | Goto next file
-`h`                    | Help (`q` to quit help-view)
-`/` + _text_ + `Enter` | Search forward
-`?` + _text_ + `Enter` | Search backward
-`n`                    | Search next forward
-`N`                    | Search next backward
-`-i`                   | toggle case-insesnitive in searches
+Command                      | Description
+-----------------------------|-------------------------------------------------------------
+`i`                          | Enter text insertion mode (exit with `Esc`)
+`:q`                         | Exit editor
+`:q!`                        | Exit editor without saving
+`:wq`                        | Exit editor and save changes
+_line no_ + `G`              | Goto line
+`G`                          | Goto last line
+`g`                          | Goto first line
+`:p`                         | Goto previous file
+`:n`                         | Goto next file
+`h`                          | Help (`q` to quit help-view)
+`:%s/text/replacement/gi`    | Replace on all rows (%) all in row (g), case insensitive (i)
+`:10,20s/text/replacement/g` | Replace all (g) occurences on row 10-20
+`:s/text/replacement/`       | Replace first occurence on current row
+`:set number`                | Show row numbers, use `nonumber` to turn off
+`/` + _text_ + `Enter`       | Search forward
+`?` + _text_ + `Enter`       | Search backward
+`n`                          | Search next forward
+`N`                          | Search next backward
+`-i`                         | toggle case-insesnitive in searches
 
 __Manipulate (only for vi):__
 
