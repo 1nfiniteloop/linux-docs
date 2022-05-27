@@ -235,7 +235,7 @@
 <tbody>
 <tr>
 <td><code>i</code></td>
-<td>Enter insertion mode (exit with <code>Esc</code>)</td>
+<td>Enter text insertion mode (exit with <code>Esc</code>)</td>
 </tr>
 <tr>
 <td><code>:q</code></td>
@@ -272,6 +272,22 @@
 <tr>
 <td><code>h</code></td>
 <td>Help (<code>q</code> to quit help-view)</td>
+</tr>
+<tr>
+<td><code>:%s/text/replacement/gi</code></td>
+<td>Replace on all rows (%) all in row (g), case insensitive (i)</td>
+</tr>
+<tr>
+<td><code>:10,20s/text/replacement/g</code></td>
+<td>Replace all (g) occurences on row 10-20</td>
+</tr>
+<tr>
+<td><code>:s/text/replacement/</code></td>
+<td>Replace first occurence on current row</td>
+</tr>
+<tr>
+<td><code>:set number</code></td>
+<td>Show row numbers, use <code>nonumber</code> to turn off</td>
 </tr>
 <tr>
 <td><code>/</code> + <em>text</em> + <code>Enter</code></td>
