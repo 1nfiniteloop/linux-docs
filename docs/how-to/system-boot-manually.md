@@ -10,13 +10,21 @@ Ubuntu uses grub as bootloader.
 __Note:__ If no GRUB boot menu appears try press `Shift` after BIOS, or `Esc`
 if using UEFI. See more @ <https://help.ubuntu.com/community/Grub2#Hidden>.
 
-### Boot kernel manually from grub
+### Boot kernel manually from grub cmdline
 
 1. Enter grub command line pressing `c` in the grub menu.
 2. Check which kernel versions is available in `/boot`
 3. Load kernel with `linux /boot/vmlinuz-4.4.0-104-generic root=/dev/sda1`
 4. Load ramdisk with `initrd /boot/initrd.img-4.4.0-104-generic`
 5. boot by typing `boot`
+
+### Load menu from grub cmdline
+
+Command below will load the grub menu, if dropped directly into grub commandline
+after boot. This could be caused by uefi partition -or grub misconfiguration.
+
+    grub> set root=(hd1,gpt2)
+    grub> configfile /efi/ubuntu/grub.cfg
 
 ### Drop into initramfs
 
