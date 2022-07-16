@@ -24,7 +24,7 @@ Common flags to `less`:
 __Navigate:__
 
 Command                      | Description
------------------------------|-------------------------------------------------------------
+-----------------------------|----------------------------------------------------------------
 `i`                          | Enter text insertion mode (exit with `Esc`)
 `:q`                         | Exit editor
 `:q!`                        | Exit editor without saving
@@ -44,6 +44,7 @@ _line no_ + `G`              | Goto line
 `n`                          | Search next forward
 `N`                          | Search next backward
 `-i`                         | toggle case-insesnitive in searches
+`:e <path>`                  | Open file from interactive menu (for vim, might not work in vi)
 
 __Manipulate (only for vi):__
 
