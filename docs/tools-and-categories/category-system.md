@@ -34,6 +34,7 @@ Command                                  | Description
 `systemctl list-units --type service`    | List active services. flag `--all` lists all available services.
 `systemctl status <service>`             | Show status of service.
 `systemctl start|stop|restart <service>` | Start or stop service.
+`systemctl poweroff|reboot|suspend`      | Shutdown, reboot or suspend system.
 
 ### Kernel configuration
 
