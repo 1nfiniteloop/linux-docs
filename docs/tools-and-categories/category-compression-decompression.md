@@ -1,4 +1,4 @@
-# Compression & decompression
+# category: compression & decompression
 
 ## Tools
 

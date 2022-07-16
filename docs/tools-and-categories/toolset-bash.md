@@ -1,4 +1,4 @@
-# bash
+# toolset: bash
 
 ## Tools
 

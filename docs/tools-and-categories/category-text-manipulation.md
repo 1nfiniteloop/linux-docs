@@ -1,4 +1,4 @@
-# Text manipulation
+# category: text manipulation
 
 ## Tools
 

@@ -1,5 +1,4 @@
-
-# Boot manually
+# system: boot manually
 
 This document describes how to manualy boot a Linux system. This might be
 necessarry to fault-trace faulty systems and fix issues during boot.

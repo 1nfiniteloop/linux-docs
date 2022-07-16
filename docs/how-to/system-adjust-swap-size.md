@@ -1,4 +1,4 @@
-# Adjust swap size
+# system: adjust swap size
 
 This instruction describes how to adjust swap partition size on the disk.
 

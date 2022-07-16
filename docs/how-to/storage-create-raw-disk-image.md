@@ -1,4 +1,4 @@
-# Create raw disk image
+# storage: create raw disk image
 
 This instruction describes how to create a raw disk image, without need of root
 privileges. I use this when creating customized Alpine Linux installations for

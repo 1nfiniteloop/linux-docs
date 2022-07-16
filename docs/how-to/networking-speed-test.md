@@ -1,4 +1,4 @@
-# Network speed test
+# networking: speed test
 
 This instruction describes a "poor man's network speed test", using only
 basic preinstalled tools found on almost every linux systems.

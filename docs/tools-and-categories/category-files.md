@@ -1,4 +1,4 @@
-# Files
+# category: files
 
 ## Tools
 

@@ -1,4 +1,4 @@
-# System recovery
+# system: recovery
 
 This instruction describes some common steps for how to recover Ubuntu system.
 

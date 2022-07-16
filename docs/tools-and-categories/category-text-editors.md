@@ -1,4 +1,4 @@
-# Text editors
+# category: text editors
 
 ## Tools
 

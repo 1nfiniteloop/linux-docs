@@ -1,4 +1,4 @@
-# Storage devices
+# category: storage devices
 
 ## Tools
 

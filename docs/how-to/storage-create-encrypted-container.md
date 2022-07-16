@@ -1,4 +1,4 @@
-# Create encrypted container
+# storage: create encrypted container
 
 This document describes how to create an luks-encrypted container for storing
 sensitive files and data securely.
