@@ -62,6 +62,7 @@ Export keys by running all steps under section "Export keys".
 
 Remove workdir:
 
+    gpg --delete-secret-and-public-keys --yes ${gpg_uid}
     rm -r ${GNUPGHOME}
 
 ### Export keys
@@ -78,6 +79,10 @@ gpg keyring after root key generation:
 Export public keys for distribution:
 
     gpg --export --armor --output ${gpg_uid}.gpg ${key_id}
+
+Optionally publish public key to key servers:
+
+    gpg --send-key ${key_id}
 
 ### Backup keys
 
@@ -136,6 +141,43 @@ Import public key in ascii from QR code:
 
     zbarimg --raw --quiet ${gpg_uid}.ascci.png \
       |gpg --import
+
+### Update expiry time for subkeys
+
+When subkeys are expired the expiry date need to be extended. This expiry date
+only affetcts the public key but the private root key is needed to configure
+expiry time. This will create an updated public key that needs to be distributed
+to all users.
+
+Create temporary environment for loading root key:
+
+    export GNUPGHOME=${HOME}/.tmp/gnupg
+    mkdir -m 700 ${GNUPGHOME}
+
+Import root key:
+
+    gpg --import ${gpg_uid}.key.gpg
+
+Extend expiry time on subkeys for sign, encrypt, authenticate:
+
+    $ gpg --expert --edit-key ${key_id}
+    gpg> key 1
+    gpg> key 2
+    gpg> key 3
+    gpg> expire
+    ...
+    Key is valid for? (0) 1y
+    ...
+    gpg> save
+
+Export public key with new expiry time for distributing to all users:
+
+    gpg --export --armor --output ${gpg_uid}.gpg ${key_id}
+
+Cleanup environment:
+
+    gpg --delete-secret-and-public-keys --yes ${gpg_uid}
+    rm -r ${GNUPGHOME}
 
 ## Reference
 
