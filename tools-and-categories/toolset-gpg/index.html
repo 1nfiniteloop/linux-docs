@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>toolset: gpg - Linux docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/atelier-forest-light.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Linux docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Linux docs</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">How to <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../how-to/networking-http-requests/" class="dropdown-item">networking: http(s) requests</a>
+</li>
+                                    
+<li>
+    <a href="../../how-to/networking-speed-test/" class="dropdown-item">networking: speed test</a>
+</li>
+                                    
+<li>
+    <a href="../../how-to/storage-create-encrypted-container/" class="dropdown-item">storage: create encrypted container</a>
+</li>
+                                    
+<li>
+    <a href="../../how-to/storage-create-raw-disk-image/" class="dropdown-item">storage: create raw disk image</a>
+</li>
+                                    
+<li>
+    <a href="../../how-to/system-adjust-swap-size/" class="dropdown-item">system: adjust swap size</a>
+</li>
+                                    
+<li>
+    <a href="../../how-to/system-boot-manually/" class="dropdown-item">system: boot manually</a>
+</li>
+                                    
+<li>
+    <a href="../../how-to/system-recovery/" class="dropdown-item">system: recovery</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tools and categories <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../category-compression-decompression/" class="dropdown-item">category: compression & decompression</a>
+</li>
+                                    
+<li>
+    <a href="../category-files/" class="dropdown-item">category: files</a>
+</li>
+                                    
+<li>
+    <a href="../category-networking/" class="dropdown-item">category: networking</a>
+</li>
+                                    
+<li>
+    <a href="../category-package-managment/" class="dropdown-item">category: package managment</a>
+</li>
+                                    
+<li>
+    <a href="../category-processes/" class="dropdown-item">category: processes</a>
+</li>
+                                    
+<li>
+    <a href="../category-storage-devices/" class="dropdown-item">category: storage devices</a>
+</li>
+                                    
+<li>
+    <a href="../category-system/" class="dropdown-item">category: system</a>
+</li>
+                                    
+<li>
+    <a href="../category-text-editors/" class="dropdown-item">category: text editors</a>
+</li>
+                                    
+<li>
+    <a href="../category-text-manipulation/" class="dropdown-item">category: text manipulation</a>
+</li>
+                                    
+<li>
+    <a href="../category-users/" class="dropdown-item">category: users</a>
+</li>
+                                    
+<li>
+    <a href="../toolset-bash/" class="dropdown-item">toolset: bash</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">toolset: gpg</a>
+</li>
+                                    
+<li>
+    <a href="../toolset-ssh/" class="dropdown-item">toolset: openssh</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../toolset-bash/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../toolset-ssh/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/1nfiniteloop/linux-docs/edit/master/docs/tools-and-categories/toolset-gpg.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#toolset-gpg" class="nav-link">toolset: gpg</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#tools" class="nav-link">Tools</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#files" class="nav-link">Files</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#usage" class="nav-link">Usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#reference" class="nav-link">Reference</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="toolset-gpg">toolset: gpg</h1>
+<h2 id="tools">Tools</h2>
+<ul>
+<li><code>gpg</code> - OpenPGP encryption and signing tool.</li>
+<li><code>gpg2</code> - Extended implementation of gpg but fully compatible with gpg. Mainly
+  targeted for desktop environments.</li>
+<li><code>paperkey</code> - Backup and restore gpg keys in paper format.</li>
+</ul>
+<h2 id="files">Files</h2>
+<ul>
+<li><code>~/.gnupg</code> - gpg config and keyring.</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>For easier copy-paste of steps below, set identity with:
+<code>gpg_uid="user@example.com"</code></p>
+<h3 id="overview">Overview</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Encrypt</td>
+<td><code>gpg --encrypt --recipient &lt;email&gt; &lt;file&gt;</code></td>
+</tr>
+<tr>
+<td>Decrypt</td>
+<td><code>gpg --decrypt &lt;file&gt;.gpg</code></td>
+</tr>
+<tr>
+<td>Sign</td>
+<td><code>gpg --sign &lt;file&gt;</code></td>
+</tr>
+<tr>
+<td>Verify</td>
+<td><code>gpg --verify &lt;file&gt;.gpg</code></td>
+</tr>
+<tr>
+<td>List public keys</td>
+<td><code>gpg --list-keys</code></td>
+</tr>
+<tr>
+<td>List private keys</td>
+<td><code>gpg --list-secret-keys</code></td>
+</tr>
+<tr>
+<td>Change password</td>
+<td><code>gpg --passwd ${gpg_uid}</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="create-new-keys">Create new keys</h3>
+<p>The root key shall only be used for issue sub-keys and should be kept stored in
+a secure place offline. Thus, set a temporary gpg workdir for key generation
+which can be removed later when finshed:</p>
+<pre><code>export GNUPGHOME=${HOME}/.tmp/gnupg-genkey
+</code></pre>
+<p>Create root key, preferably choose Elliptic Curve (ECC) and curve 25519 when
+prompted. The chosen password will be used for both root key and subkeys. Set
+capability to "Certify" only with no expiry.</p>
+<pre><code>gpg --expert --full-generate-key
+</code></pre>
+<p>Create 3 separate sub-keys for signing, encryption and authentication. The root
+key id can be seen from command above or with <code>gpg --list-keys</code>. The shortened
+key id is just the last part of the complete key id. Recommend to choose
+1 year expire.</p>
+<pre><code>$ gpg --expert --edit-key ${key_id}
+gpg&gt; addkey
+...
+gpg&gt; save
+</code></pre>
+<p>Create revocation certificate which makes it posslbe to revoke the pgp identity.
+The certificate file should be stored in a secondary place that allows retrieval
+in case the key backup fails.</p>
+<pre><code>gpg --gen-revoke --output ${gpg_uid}.revoke-cert.gpg ${key_id}
+</code></pre>
+<p>Export keys by running all steps under section "Export keys".</p>
+<p>Remove workdir:</p>
+<pre><code>gpg --delete-secret-and-public-keys --yes ${gpg_uid}
+rm -r ${GNUPGHOME}
+</code></pre>
+<h3 id="export-keys">Export keys</h3>
+<p>Export private root key and subkeys for secure offline storage:</p>
+<pre><code>gpg --export-secret-keys --armor --output ${gpg_uid}.key.gpg ${key_id}
+</code></pre>
+<p>Export private subkeys without root-key included, for importing to user's home
+gpg keyring after root key generation:</p>
+<pre><code>gpg --export-secret-subkeys --armor --output ${gpg_uid}.subkey.gpg ${key_id}
+</code></pre>
+<p>Export public keys for distribution:</p>
+<pre><code>gpg --export --armor --output ${gpg_uid}.gpg ${key_id}
+</code></pre>
+<p>Optionally publish public key to key servers:</p>
+<pre><code>gpg --send-key ${key_id}
+</code></pre>
+<h3 id="backup-keys">Backup keys</h3>
+<p>Backup private root key to paperkey:</p>
+<pre><code>gpg --export-secret-key ${key_id} \
+  |paperkey --output ${gpg_uid}.paperkey
+</code></pre>
+<p>Backup private root key to paperkey as QR code:</p>
+<pre><code>gpg --export-secret-key ${key_id} \
+  |paperkey --output-type raw \
+  |qrencode --8bit --output ${gpg_uid}.paperkey.png
+</code></pre>
+<p>Export public key to QR code (in ascii text):</p>
+<pre><code>gpg --armor --export ${key_id} \
+  |qrencode --output ${gpg_uid}.ascci.png
+</code></pre>
+<h3 id="import-keys">Import keys</h3>
+<p>Import public or private keys:</p>
+<pre><code>gpg --import &lt;gpg-key&gt;
+</code></pre>
+<p>Update the key trust:</p>
+<pre><code>$ gpg --edit-key ${key_id}
+gpg&gt; trust
+...
+gpg&gt; quit
+</code></pre>
+<h3 id="restore-keys">Restore keys</h3>
+<p>Convert public key to raw format, needed when restoring paperkey
+backup below:</p>
+<pre><code>cat ${gpg_uid}.gpg \
+  |gpg --dearmor &gt; ${gpg_uid}.gpg.raw
+</code></pre>
+<p>Restore private root key from paperkey backup:</p>
+<pre><code>paperkey --pubring ${gpg_uid}.gpg.raw --secrets ${gpg_uid}.paperkey \
+  |gpg --import
+</code></pre>
+<p>Restore private root key from paperkey backup in QR code:</p>
+<pre><code>zbarimg --raw --quiet -S binary ${gpg_uid}.paperkey.png \
+  |paperkey --pubring ${gpg_uid}.gpg.raw \
+  |gpg --import
+</code></pre>
+<p><strong>Note:</strong> flag <code>-S binary</code> is a required but undocumented in the man page, it
+was added in zbarimg 0.23.1.</p>
+<p>Import public key in ascii from QR code:</p>
+<pre><code>zbarimg --raw --quiet ${gpg_uid}.ascci.png \
+  |gpg --import
+</code></pre>
+<h3 id="update-expiry-time-for-subkeys">Update expiry time for subkeys</h3>
+<p>When subkeys are expired the expiry date need to be extended. This expiry date
+only affetcts the public key but the private root key is needed to configure
+expiry time. This will create an updated public key that needs to be distributed
+to all users.</p>
+<p>Create temporary environment for loading root key:</p>
+<pre><code>export GNUPGHOME=${HOME}/.tmp/gnupg
+mkdir -m 700 ${GNUPGHOME}
+</code></pre>
+<p>Import root key:</p>
+<pre><code>gpg --import ${gpg_uid}.key.gpg
+</code></pre>
+<p>Extend expiry time on subkeys for sign, encrypt, authenticate:</p>
+<pre><code>$ gpg --expert --edit-key ${key_id}
+gpg&gt; key 1
+gpg&gt; key 2
+gpg&gt; key 3
+gpg&gt; expire
+...
+Key is valid for? (0) 1y
+...
+gpg&gt; save
+</code></pre>
+<p>Export public key with new expiry time for distributing to all users:</p>
+<pre><code>gpg --export --armor --output ${gpg_uid}.gpg ${key_id}
+</code></pre>
+<p>Cleanup environment:</p>
+<pre><code>gpg --delete-secret-and-public-keys --yes ${gpg_uid}
+rm -r ${GNUPGHOME}
+</code></pre>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://github.com/drduh/YubiKey-Guide">https://github.com/drduh/YubiKey-Guide</a></li>
+<li><a href="https://wiki.archlinux.org/title/Paperkey">https://wiki.archlinux.org/title/Paperkey</a></li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

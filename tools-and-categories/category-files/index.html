@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>category: files - Linux docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/atelier-forest-light.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Linux docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Linux docs</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">How to <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../how-to/networking-http-requests/" class="dropdown-item">networking: http(s) requests</a>
+</li>
+                                    
+<li>
+    <a href="../../how-to/networking-speed-test/" class="dropdown-item">networking: speed test</a>
+</li>
+                                    
+<li>
+    <a href="../../how-to/storage-create-encrypted-container/" class="dropdown-item">storage: create encrypted container</a>
+</li>
+                                    
+<li>
+    <a href="../../how-to/storage-create-raw-disk-image/" class="dropdown-item">storage: create raw disk image</a>
+</li>
+                                    
+<li>
+    <a href="../../how-to/system-adjust-swap-size/" class="dropdown-item">system: adjust swap size</a>
+</li>
+                                    
+<li>
+    <a href="../../how-to/system-boot-manually/" class="dropdown-item">system: boot manually</a>
+</li>
+                                    
+<li>
+    <a href="../../how-to/system-recovery/" class="dropdown-item">system: recovery</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tools and categories <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../category-compression-decompression/" class="dropdown-item">category: compression & decompression</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">category: files</a>
+</li>
+                                    
+<li>
+    <a href="../category-networking/" class="dropdown-item">category: networking</a>
+</li>
+                                    
+<li>
+    <a href="../category-package-managment/" class="dropdown-item">category: package managment</a>
+</li>
+                                    
+<li>
+    <a href="../category-processes/" class="dropdown-item">category: processes</a>
+</li>
+                                    
+<li>
+    <a href="../category-storage-devices/" class="dropdown-item">category: storage devices</a>
+</li>
+                                    
+<li>
+    <a href="../category-system/" class="dropdown-item">category: system</a>
+</li>
+                                    
+<li>
+    <a href="../category-text-editors/" class="dropdown-item">category: text editors</a>
+</li>
+                                    
+<li>
+    <a href="../category-text-manipulation/" class="dropdown-item">category: text manipulation</a>
+</li>
+                                    
+<li>
+    <a href="../category-users/" class="dropdown-item">category: users</a>
+</li>
+                                    
+<li>
+    <a href="../toolset-bash/" class="dropdown-item">toolset: bash</a>
+</li>
+                                    
+<li>
+    <a href="../toolset-gpg/" class="dropdown-item">toolset: gpg</a>
+</li>
+                                    
+<li>
+    <a href="../toolset-ssh/" class="dropdown-item">toolset: openssh</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../category-compression-decompression/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../category-networking/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/1nfiniteloop/linux-docs/edit/master/docs/tools-and-categories/category-files.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#category-files" class="nav-link">category: files</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#tools" class="nav-link">Tools</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#usage" class="nav-link">Usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="category-files">category: files</h1>
+<h2 id="tools">Tools</h2>
+<ul>
+<li><code>basename</code> - Strip directory from filenames (<code>/a/b/c.txt</code> -&gt; <code>c.txt</code>).</li>
+<li><code>cat</code> - Concatenate files.</li>
+<li><code>chgrp</code> - Change file ownership (group).</li>
+<li><code>chmod</code> - Change file permissions.</li>
+<li><code>chown</code> - Change file ownership (user and group).</li>
+<li><code>cmp</code> - Compare binary files.</li>
+<li><code>cp</code> - Copy files and directories.</li>
+<li><code>diff</code> - Compare text-files and output diff.</li>
+<li><code>dirname</code> - Get directory of an absolute path (<code>/a/b/c.txt</code> -&gt; <code>/a/b</code>).</li>
+<li><code>du</code> - Size of files &amp; folders.</li>
+<li><code>fuser</code> - List processes using files or sockets.</li>
+<li><code>file</code> - Get which file type.</li>
+<li><code>find</code> - Find files by name.</li>
+<li><code>grep</code> - Find files by content.</li>
+<li><code>head</code> - Output first part of file.</li>
+<li><code>hexdump</code> - Dump file in ASCII, decimal, hexadecimal, octal (see also <code>xxd</code>).</li>
+<li><code>install</code> - Copy files and set attributes.</li>
+<li><code>ln</code> - Make links between files.</li>
+<li><code>mv</code> - Move files and folders.</li>
+<li><code>mktemp</code> - Create a temporary file or directory (with a random suffix).</li>
+<li><code>md5sum</code> - File checksum using md5 algorithm.</li>
+<li><code>readlink</code> - Print value of a symbolic link (or canonical file name).</li>
+<li><code>sha1sum</code> - File checksum using sha1 algorithm.</li>
+<li><code>stat</code> - Get file info (size, type, inode, permissions).</li>
+<li><code>touch</code> - Create empty file (or alter existing file timestamp).</li>
+<li><code>truncate</code> - shrink or extend the size of a file to the specified size.</li>
+<li><code>rm</code> - Remove files and folders.</li>
+<li><code>split</code> - Split file into pieces.</li>
+<li><code>tail</code> - Output last part of file.</li>
+<li><code>umask</code> - Set file mode creation mask in folder.</li>
+<li><code>wc</code> - Word and line count.</li>
+<li><code>xxd</code> - Make a hexdump or do the reverse (see also <code>hexdump</code>).</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<h3 id="copying">Copying</h3>
+<ul>
+<li>Copy content of directory into other: <code>cp -a /source/. /dest</code></li>
+<li>Move content of directory into other: <code>mv /source/* /dest</code></li>
+</ul>
+<h3 id="file-permissions-ownership">File permissions &amp; ownership</h3>
+<table>
+<thead>
+<tr>
+<th>Bit</th>
+<th>Decimal</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>001</code></td>
+<td>1</td>
+<td>x</td>
+<td>Execute, allow file to be executed or folder to be examined.</td>
+</tr>
+<tr>
+<td><code>010</code></td>
+<td>2</td>
+<td>w</td>
+<td>Write</td>
+</tr>
+<tr>
+<td><code>100</code></td>
+<td>4</td>
+<td>r</td>
+<td>Read</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>chmod 744 &lt;file&gt;</code></td>
+<td>Set permissions to: user=7(rwx), group=4(r), other=4(r)</td>
+</tr>
+<tr>
+<td><code>chmod +x &lt;file&gt;</code></td>
+<td>Make file executable for all.</td>
+</tr>
+<tr>
+<td><code>chmod a+x &lt;file&gt;</code></td>
+<td>Make file executable for all.</td>
+</tr>
+<tr>
+<td><code>chmod go-w &lt;file&gt;</code></td>
+<td>Remove write-permissions for group and others.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="search">Search</h3>
+<p>Common flags to <code>grep</code>:</p>
+<ul>
+<li><code>[-r|--recursive]</code></li>
+<li><code>[-n|--line-number]</code></li>
+<li><code>[-l|--files-with-matches]</code> List files with matches, instead of the matched line.</li>
+<li><code>[-E|--extended-regexp]</code> Use regular experssions in match string.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>find . -type d -name &lt;directory&gt; -prune</code></td>
+<td>Find directory by name, don't examine inside  target directory iteself (<code>-prune</code>).</td>
+</tr>
+<tr>
+<td><code>find . -type f -name '*.cc' -o '*.h'</code></td>
+<td>find all file by type(s), where <code>-o</code> means logical OR.</td>
+</tr>
+<tr>
+<td><code>grep -r -E '^#include &lt;algorithm&gt;$' &lt;directory&gt;</code></td>
+<td>Find files containing match.</td>
+</tr>
+<tr>
+<td><code>find . -type f -name '*.h' |xargs grep '&lt;match&gt;'</code></td>
+<td>Find match in all filenames with suffix .h.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="examine-files">Examine files</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>file &lt;file-name&gt;</code></td>
+<td>Determine file type.</td>
+</tr>
+<tr>
+<td><code>stat &lt;file-name&gt;</code></td>
+<td>Display file status and details.</td>
+</tr>
+<tr>
+<td><code>stat -c "%a %n" &lt;file-name&gt;</code></td>
+<td>Display file or folder permissions in octal.</td>
+</tr>
+<tr>
+<td><code>du -sh &lt;file-or-directory&gt;</code></td>
+<td>Check total size of file or folder and its content.</td>
+</tr>
+<tr>
+<td><code>du -hPd 1 / |sort -hr</code></td>
+<td>Check total size of folders in root, sorted by size.</td>
+</tr>
+<tr>
+<td><code>wc -c &lt;file&gt;</code></td>
+<td>Check file contents size in bytes.</td>
+</tr>
+<tr>
+<td><code>lsof &lt;file-or-directory&gt;</code></td>
+<td>Check what process uses this directory or file.</td>
+</tr>
+<tr>
+<td><code>fuser &lt;file&gt;</code></td>
+<td>Identify processes using files (or sockets).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="compare-files">Compare files</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>md5sum &lt;first-file&gt; &lt;second-file&gt;</code></td>
+<td>Compare files by checksum</td>
+</tr>
+<tr>
+<td><code>diff -u first.txt second.txt</code></td>
+<td>Compare text files and output diff.</td>
+</tr>
+<tr>
+<td><code>diff -ruN &lt;first-folder&gt; &lt;second-folder&gt;</code></td>
+<td>Compare two directories and output diff.</td>
+</tr>
+<tr>
+<td><code>cmp &lt;first-file&gt; &lt;second-file&gt;</code></td>
+<td>Compare binary files and output first diff.</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
