@@ -45,3 +45,12 @@ __NOTE:__ If reconfiguration is made from inside chroot:
    include.
 
 Update initramfs on latest kernel with: `sudo update-initramfs -u`
+
+## Switch to shell from login screen
+
+* terminal: `Ctrl` + `Alt` + `F2`
+* login screen: `Ctrl` + `Alt` + `F1`
+
+## Downgrade current runlevel
+
+    sudo systemctl isolate rescue.target
