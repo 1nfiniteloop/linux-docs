@@ -5,6 +5,7 @@
 * `blkid` - Print block device attributes.
 * `dd` - File/block copy utility.
 * `fdisk` - Partition tool, menu-driven.
+* `gdisk` - fdisk for GPT partitions.
 * `gparted` - Graphical version of parted.
 * `lsblk` - List block devices.
 * `lshw` - List hardware details of the machine.
