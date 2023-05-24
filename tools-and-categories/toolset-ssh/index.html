@@ -122,6 +122,10 @@
 </li>
                                     
 <li>
+    <a href="../toolset-openssl/" class="dropdown-item">toolset: openssl</a>
+</li>
+                                    
+<li>
     <a href="./" class="dropdown-item active">toolset: openssh</a>
 </li>
                                 </ul>
@@ -135,7 +139,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../toolset-gpg/" class="nav-link">
+                                <a rel="prev" href="../toolset-openssl/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -272,31 +276,7 @@
 </tbody>
 </table>
 <p>* Naming the key according to <code>&lt;user&gt;@&lt;fqdn&gt;</code> is good practice for distinguish
-keys, example <code>alice@bob.sh</code>.</p>
-<h3 id="rsync">rsync</h3>
-<p>Common used flags for <code>rsync</code>:</p>
-<ul>
-<li><code>[--progress]</code></li>
-<li><code>[-a|--archive]</code> - Preserve timestamps, ownerships, etc.</li>
-<li><code>[-z|--compress]</code></li>
-<li><code>[--remove-source-files]</code> - Remove files on sending side after successful transfer (move).</li>
-<li><code>[--ignore-existing]</code> - Skip already existing files on destination.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>rsync &lt;user&gt;@&lt;fqdn&gt;:&lt;remote-dir&gt; &lt;local-dir&gt;</code></td>
-<td>Copy folder from a remote host*</td>
-</tr>
-</tbody>
-</table>
-<p>* a trailing slash at the end on source folder means "copy content in the folder"</p></div>
+keys, example <code>alice@bob.sh</code>.</p></div>
             </div>
         </div>
 

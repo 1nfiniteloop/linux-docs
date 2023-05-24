@@ -122,6 +122,10 @@
 </li>
                                     
 <li>
+    <a href="../../tools-and-categories/toolset-openssl/" class="dropdown-item">toolset: openssl</a>
+</li>
+                                    
+<li>
     <a href="../../tools-and-categories/toolset-ssh/" class="dropdown-item">toolset: openssh</a>
 </li>
                                 </ul>
@@ -179,6 +183,14 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#switch-to-shell-from-login-screen" class="nav-link">Switch to shell from login screen</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#downgrade-current-runlevel" class="nav-link">Downgrade current runlevel</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -233,7 +245,15 @@ sudo mount --bind /sys /mnt/sys
    Change <code>/etc/cryptsetup-initramfs/conf-hook</code> with <code>CRYPTSETUP=y</code> to always
    include.</li>
 </ol>
-<p>Update initramfs on latest kernel with: <code>sudo update-initramfs -u</code></p></div>
+<p>Update initramfs on latest kernel with: <code>sudo update-initramfs -u</code></p>
+<h2 id="switch-to-shell-from-login-screen">Switch to shell from login screen</h2>
+<ul>
+<li>terminal: <code>Ctrl</code> + <code>Alt</code> + <code>F2</code></li>
+<li>login screen: <code>Ctrl</code> + <code>Alt</code> + <code>F1</code></li>
+</ul>
+<h2 id="downgrade-current-runlevel">Downgrade current runlevel</h2>
+<pre><code>sudo systemctl isolate rescue.target
+</code></pre></div>
             </div>
         </div>
 

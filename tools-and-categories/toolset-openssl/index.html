@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>category: processes - Linux docs</title>
+        <title>toolset: openssl - Linux docs</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -90,7 +90,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">category: processes</a>
+    <a href="../category-processes/" class="dropdown-item">category: processes</a>
 </li>
                                     
 <li>
@@ -122,7 +122,7 @@
 </li>
                                     
 <li>
-    <a href="../toolset-openssl/" class="dropdown-item">toolset: openssl</a>
+    <a href="./" class="dropdown-item active">toolset: openssl</a>
 </li>
                                     
 <li>
@@ -139,17 +139,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../category-package-managment/" class="nav-link">
+                                <a rel="prev" href="../toolset-gpg/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../category-storage-devices/" class="nav-link">
+                                <a rel="next" href="../toolset-ssh/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/1nfiniteloop/linux-docs/edit/master/docs/tools-and-categories/category-processes.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/1nfiniteloop/linux-docs/edit/master/docs/tools-and-categories/toolset-openssl.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -169,7 +169,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#category-processes" class="nav-link">category: processes</a>
+            <li class="nav-item" data-level="1"><a href="#toolset-openssl" class="nav-link">toolset: openssl</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#tools" class="nav-link">Tools</a>
               <ul class="nav flex-column">
@@ -190,83 +190,63 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="category-processes">category: processes</h1>
+<h1 id="toolset-openssl">toolset: openssl</h1>
 <h2 id="tools">Tools</h2>
 <ul>
-<li><code>/bin/kill</code> - send a signal to a process (kill exists as a bash built-in
-  command also).</li>
-<li><code>pgrep</code> - look up processes based on name.</li>
-<li><code>pkill</code> - signal processes based on name.</li>
-<li><code>pmap</code> - Report memory map of a process.</li>
-<li><code>ps</code> - report snapshot info about a processes.</li>
-<li><code>top</code> - Display various info continuous about processes.</li>
-<li><code>watch</code> - Periodically execute a program.</li>
-<li><code>time</code> - Run program and summarize system resource usage.</li>
+<li><code>openssl</code></li>
 </ul>
 <h2 id="files">Files</h2>
 <p><em>None</em></p>
 <h2 id="usage">Usage</h2>
-<h3 id="top">top</h3>
-<ul>
-<li>Sort by memory usage: <code>Shift</code> + <code>m</code>.</li>
-<li>Sort by CPU usage: <code>Shift</code> + <code>t</code>.</li>
-</ul>
-<h3 id="process-info">Process info</h3>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>sudo pmap &lt;pid&gt;</code></td>
-<td>Show memory usage for process.</td>
-</tr>
-<tr>
-<td><code>echo $$</code></td>
-<td>Get current procees PID.</td>
-</tr>
-<tr>
-<td><code>cat /proc/&lt;pid&gt;/cmdline</code></td>
-<td>Get commandline arguments provided from start</td>
-</tr>
-<tr>
-<td><code>ps -ef</code></td>
-<td>Get all processes (optional flags: <code>[f|--forest]</code>).</td>
-</tr>
-</tbody>
-</table>
-<h3 id="process-signals">Process signals</h3>
-<p>See more @ <code>kill --list</code> and <code>man signal 7</code> for all existing signals. Note:
-<code>kill</code> is also a bash built-in command, which is why <code>/bin/kill</code> is used below.</p>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/bin/kill --signal STOP &lt;pid&gt;</code></td>
-<td>Pause process, equivalent to <code>Ctrl</code> + <code>Z</code>.</td>
-</tr>
-<tr>
-<td><code>/bin/kill --signal INT &lt;pid&gt;</code></td>
-<td>Terminate process, equivalent to <code>Ctrl</code>+<code>C</code>.</td>
-</tr>
-<tr>
-<td><code>/bin/kill --signal CONT &lt;pid&gt;</code></td>
-<td>Resume process, equivalent to <code>fg %&lt;job-no&gt;</code>.</td>
-</tr>
-<tr>
-<td><code>/bin/kill --signal KILL &lt;pid&gt;</code></td>
-<td>Terminate process, forced.</td>
-</tr>
-</tbody>
-</table></div>
+<h3 id="pkey">pkey</h3>
+<p>Create rsa key:</p>
+<pre><code>openssl genpkey \
+  -algorithm RSA \
+  -pkeyopt rsa_keygen_bits:2048 \
+  -out key.pem
+</code></pre>
+<p>Create EC key:</p>
+<pre><code>openssl genpkey \
+  -algorithm EC \
+  -pkeyopt ec_paramgen_curve:P-256 \
+  -out key.pem
+</code></pre>
+<h3 id="x509">x509</h3>
+<p>Create key and self signed cert:</p>
+<pre><code>openssl req \
+  -x509 \
+  -newkey rsa:4096 \
+  -keyout key.pem \
+  -out cert.pem \
+  -sha256 \
+  -days 365
+  -subj "/C=SE/L=Goteborg/O=Local Area Network/OU=Local Area Network Certificate Authority/CN=server.lan"
+</code></pre>
+<p>Create self signed cert with existing key:</p>
+<pre><code>openssl req \
+  -x509 \
+  -key "path/to/ca.key.pem" \
+  -out "path/to/ca.cert.pem" \
+  -sha256 \
+  -days 365 \
+  -subj "/C=SE/L=Goteborg/O=Local Area Network/OU=Local Area Network Certificate Authority/CN=server.lan"
+</code></pre>
+<h3 id="inspect-and-verify">Inspect and verify</h3>
+<p>Inspect key:</p>
+<pre><code>openssl pkey -noout -text -in ca.key.pem
+</code></pre>
+<p>Inspect cert:</p>
+<pre><code>openssl x509 -noout -text -in ca.cert.pem
+</code></pre>
+<p>Inspect csr:</p>
+<pre><code>openssl req -noout -text -in ca.csr
+</code></pre>
+<p>Verify intermediate certificate:</p>
+<pre><code>openssl verify -CAfile ca_root.pem ca_intermediate.pem
+</code></pre>
+<p>Verify server/client certificates:</p>
+<pre><code>openssl verify -CAfile ca-bundle.pem server.lan.pem
+</code></pre></div>
             </div>
         </div>
 

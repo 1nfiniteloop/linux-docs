@@ -122,6 +122,10 @@
 </li>
                                     
 <li>
+    <a href="../toolset-openssl/" class="dropdown-item">toolset: openssl</a>
+</li>
+                                    
+<li>
     <a href="../toolset-ssh/" class="dropdown-item">toolset: openssh</a>
 </li>
                                 </ul>
@@ -385,7 +389,37 @@
 <td>Compare binary files and output first diff.</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+<h3 id="rsync">rsync</h3>
+<p>Common used flags for <code>rsync</code>:</p>
+<ul>
+<li><code>[-a|--archive]</code> - Preserve timestamps, ownerships, etc.</li>
+<li><code>[-n|--dry-run]</code></li>
+<li><code>[--progress]</code></li>
+<li><code>[-z|--compress]</code></li>
+<li><code>[--remove-source-files]</code> - Remove files on sending side after successful transfer (move).</li>
+<li><code>[--ignore-existing]</code> - Skip already existing files on destination.</li>
+<li><code>[-c|--checksum]</code> - Skip based on checksum, not mod-time &amp; size</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rsync &lt;user&gt;@&lt;fqdn&gt;:&lt;remote-dir&gt; &lt;local-dir&gt;</code></td>
+<td>Copy folder from a remote host*</td>
+</tr>
+<tr>
+<td><code>rsync -avnc path/to/local-dir &lt;user&gt;@&lt;fqdn&gt;:path/to</code></td>
+<td>Compare folder contents.</td>
+</tr>
+</tbody>
+</table>
+<p>* a trailing slash at the end on source folder means "copy content in the folder"</p></div>
             </div>
         </div>
 
