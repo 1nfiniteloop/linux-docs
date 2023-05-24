@@ -51,19 +51,3 @@ Command                                                 | Description
 
 \* Naming the key according to `<user>@<fqdn>` is good practice for distinguish
 keys, example `alice@bob.sh`.
-
-### rsync
-
-Common used flags for `rsync`:
-
-* `[--progress]`
-* `[-a|--archive]` - Preserve timestamps, ownerships, etc.
-* `[-z|--compress]`
-* `[--remove-source-files]` - Remove files on sending side after successful transfer (move).
-* `[--ignore-existing]` - Skip already existing files on destination.
-
-Command                                        | Description
------------------------------------------------|--------------------------------
-`rsync <user>@<fqdn>:<remote-dir> <local-dir>` | Copy folder from a remote host*
-
-\* a trailing slash at the end on source folder means "copy content in the folder"

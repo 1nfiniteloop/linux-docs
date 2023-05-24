@@ -96,3 +96,22 @@ Command                                    | Description
 `diff -u first.txt second.txt`             | Compare text files and output diff.
 `diff -ruN <first-folder> <second-folder>` | Compare two directories and output diff.
 `cmp <first-file> <second-file>`           | Compare binary files and output first diff.
+
+### rsync
+
+Common used flags for `rsync`:
+
+* `[-a|--archive]` - Preserve timestamps, ownerships, etc.
+* `[-n|--dry-run]`
+* `[--progress]`
+* `[-z|--compress]`
+* `[--remove-source-files]` - Remove files on sending side after successful transfer (move).
+* `[--ignore-existing]` - Skip already existing files on destination.
+* `[-c|--checksum] ` - Skip based on checksum, not mod-time & size
+
+Command                                               | Description
+------------------------------------------------------|--------------------------------
+`rsync <user>@<fqdn>:<remote-dir> <local-dir>`        | Copy folder from a remote host*
+`rsync -avnc path/to/local-dir <user>@<fqdn>:path/to` | Compare folder contents.
+
+\* a trailing slash at the end on source folder means "copy content in the folder"
